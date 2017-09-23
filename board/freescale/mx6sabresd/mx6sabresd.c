@@ -648,6 +648,7 @@ int power_init_board(void)
 	unsigned int reg;
 	int ret;
 
+#if 0
 	p = pfuze_common_init(I2C_PMIC);
 	if (!p)
 		return -ENODEV;
@@ -668,6 +669,7 @@ int power_init_board(void)
 	reg |= LDOB_3_00V;
 	pmic_reg_write(p, PFUZE100_VGEN5VOL, reg);
 
+#endif
 	return 0;
 }
 
